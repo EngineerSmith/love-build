@@ -2,7 +2,7 @@
 set -e
 
 # Debug mode
-if [ "${GITHUB_REPOSITORY}" = "nhartland/love-build" ]; then
+if [ "${GITHUB_REPOSITORY}" = "engineersmith/love-build" ]; then
     set -x
 fi
 
@@ -21,7 +21,9 @@ check_environment() {
 get_love_binaries() {
     glb_arch=$1
     glb_root_url="https://github.com/love2d/love/releases/download"
-    wget "${glb_root_url}/${INPUT_LOVE_VERSION}/love-${INPUT_LOVE_VERSION}-${glb_arch}.zip"
+    if [ ${INPUT_LOVE_VERSION} != "12.0" ]; then
+        wget "${glb_root_url}/${INPUT_LOVE_VERSION}/love-${INPUT_LOVE_VERSION}-${glb_arch}.zip"
+    fi
     unzip "love-${INPUT_LOVE_VERSION}-${glb_arch}.zip" 
     rm "love-${INPUT_LOVE_VERSION}-${glb_arch}.zip" 
 }
