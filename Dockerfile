@@ -21,5 +21,5 @@ COPY build.sh /love-build/build.sh
 COPY module_loader.lua /love-build/module_loader.lua
 COPY love-12.0-win32.zip /love-build/love-12.0-win32.zip
 COPY love-12.0-win64.zip /love-build/love-12.0-win64.zip
-COPY love-12.0-macos.zip /love-build/love-macos.zip
+COPY love-12.0-macos.zip /love-build/love-12.0-macos.zip
 ENTRYPOINT ["/love-build/build.sh"]
