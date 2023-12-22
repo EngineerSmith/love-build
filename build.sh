@@ -23,8 +23,6 @@ get_love_binaries() {
     glb_root_url="https://github.com/love2d/love/releases/download"
     if [ ${INPUT_LOVE_VERSION} != "12.0" ]; then
         wget "${glb_root_url}/${INPUT_LOVE_VERSION}/love-${INPUT_LOVE_VERSION}-${glb_arch}.zip"
-    else
-        mv "love-build/love-${INPUT_LOVE_VERSION}-${glb_arch}.zip" .
     fi
     unzip "love-${INPUT_LOVE_VERSION}-${glb_arch}.zip" 
     rm "love-${INPUT_LOVE_VERSION}-${glb_arch}.zip" 
