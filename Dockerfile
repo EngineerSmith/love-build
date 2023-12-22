@@ -19,7 +19,7 @@ RUN cd luarocks-3.3.1 && \
 # Copy and setup entrypoint
 COPY love-12.0-win32.zip /love-build/12.0/love-12.0-win32.zip
 COPY love-12.0-win64.zip /love-build/12.0/love-12.0-win64.zip
-COPY love-12.0-macos.zip /love-build/12.0/love-12.0-macos.zip
+COPY love-macos.zip /love-build/12.0/love-macos.zip
 COPY build.sh /love-build/build.sh
 COPY module_loader.lua /love-build/module_loader.lua
 ENTRYPOINT ["/love-build/build.sh"]
