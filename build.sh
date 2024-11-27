@@ -157,7 +157,7 @@ main() {
     ### macOS/win builds ##############################################
     
     build_macos
-    build_windows "win32";
+    # build_windows "win32"; # removed support for win32
     build_windows "win64";
 
 }
